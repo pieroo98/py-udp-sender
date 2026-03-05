@@ -16,7 +16,6 @@ DATA_SIZE = PAYLOAD_SIZE - HEADER_SIZE
 DATA = b"c" * DATA_SIZE
 
 # Intervallo target tra pacchetti (secondi)
-# 100 Mbps = 100_000_000 bit/s
 # pacchetti/s = 100_000_000 / (PAYLOAD_SIZE * 8)
 TARGET_PPS      = (TARGET_MBPS * 1_000_000) / (PAYLOAD_SIZE * 8)
 TARGET_INTERVAL = 1.0 / TARGET_PPS  # ~0.0001178 s ≈ 117.8 µs
